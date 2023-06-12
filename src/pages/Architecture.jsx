@@ -7,6 +7,7 @@ import axios from "axios";
 export const Architecture = () => {
     const [isModal, setIsModal] = useState(false)
     const [author, setAuthor] = useState()
+    //hello
 
     const id = window.location.href.slice(35, window.location.href.length)
     console.log(id)
