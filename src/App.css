@@ -54,6 +54,14 @@ input{
   background-color: #14213d;
 }
 
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit the text to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
 .header-container {
   width: 100%;
   display: flex;

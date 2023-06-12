@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <AboutUs />,
     },
     {
-        path: "architecture",
+        path: "architecture/:id",
         element: <Architecture />
     },
     {

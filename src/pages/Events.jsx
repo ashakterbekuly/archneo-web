@@ -35,14 +35,14 @@ export const Events = () => {
             <section className="bg-white mx-auto">
                 <div className="my-8 flex flex-wrap pt-4 pb-12">
                     <p className="mt-8 mb-8 text-4xl md:text-5xl lg:text-7xl font-monospace lg:mx-4 md:mx-2 sm:mx-2 h-16 text-[#fca311]">UPCOMING EVENTS</p>
-                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 bg-white">
+                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 bg-white">
                         {items &&
                             items.map((item, index) => (
                                 <div key={index} className="py-4 border border-black p-5">
                                     <div className="grid">
-                                        <img className="object-fill h-64" src={item.imageUrl} alt="..." />
+                                        <img className="object-fill h-64 w-auto h-auto" src={item.imageUrl} alt="..." />
                                         <div className="h-12 mt-6">
-                                            <span className="text-xl text-black hover:underline">{item.title}</span>
+                                            <span className="card-title text-xl text-black hover:underline">{item.title}</span>
                                         </div>
                                         <button
                                             className="flex justify-end hover:underline px-2 py-2 text-black text-md mt-8 more-info text-right"

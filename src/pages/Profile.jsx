@@ -2,6 +2,8 @@
 import '../App.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {Header} from "../components/header";
+import {Footer} from "../components/footer";
 export const Profile = () => {
 
     const [isModal, setIsmodal] = useState(false)
@@ -41,6 +43,7 @@ export const Profile = () => {
 
     return (
         <div>
+            <Header />
             <div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-12 lg:my-0">
                 <div id="profile" className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white mx-6 lg:mx-0">
                     <div className="p-4 md:p-16 text-center lg:text-left">
@@ -114,33 +117,36 @@ export const Profile = () => {
                 <div className="max-w-sm w-full sm:w-auto rounded px-8 overflow-hidden shadow-lg mx-4 my-4 sm:mx-8 sm:my-8 bg-white">
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl my-8">Looking for a specialist?</div>
-                        <a className="looking-for-specialist" href="/projects">
-                            <button className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16">
+                            <button
+                                className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16"
+                                onClick={() => window.location.assign('/projects')}
+                            >
                                 See the projects
                             </button>
-                        </a>
                     </div>
                 </div>
 
                 <div className="max-w-sm w-full sm:w-auto rounded px-8 overflow-hidden shadow-lg mx-4 my-4 sm:mx-8 sm:my-8 bg-white">
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl my-8">View projects of your colleagues!</div>
-                        <a className="looking-for-specialist" href="/projects">
-                            <button className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16">
+                            <button
+                                className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16"
+                                onClick={() => window.location.assign('/projects')}
+                            >
                                 See the projects
                             </button>
-                        </a>
                     </div>
                 </div>
 
                 <div className="max-w-sm w-full sm:w-auto rounded px-8 overflow-hidden shadow-lg mx-4 my-4 sm:mx-8 sm:my-8 bg-white">
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl my-8">Don't miss the upcoming event</div>
-                        <a className="looking-for-specialist" href="/projects">
-                            <button className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16">
+                            <button
+                                className="hover:underline bg-gray-800 text-xl text-white rounded-full my-8 py-2 px-8 sm:px-16"
+                                onClick={() => window.location.assign('/events')}
+                            >
                                 See the events
                             </button>
-                        </a>
                     </div>
                 </div>
 
@@ -161,6 +167,7 @@ export const Profile = () => {
                     </g>
                 </svg>
             </div>
+            <Footer />
         </div>
     )
 }

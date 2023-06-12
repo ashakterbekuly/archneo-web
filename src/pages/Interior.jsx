@@ -48,7 +48,7 @@ export const Interior = () => {
                 <div className="container max-w-5xl mx-auto m-2">
                     <h2 className="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">Interior Designs</h2>
 
-                    <Carousel className="w-1/2">
+                    <Carousel className="w-1/2" showIndicators={false}>
                         {items ? items.map((item) => (
                             <div>
                                 <img className="h-auto" src={item.imageUrl} alt="#" />
@@ -60,8 +60,8 @@ export const Interior = () => {
                             <div className="flex flex-row divide-y divide-black text-left mt-20">
                                 <div className="w-1/2 sm:w-1/2 p-2">
                                     <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3"> {item.title} </h3>
-                                    <p className="text-gray-600 mb-8"> Need Description? <br/>
-                                        <br/> Author: <button className="text-black underline" id="author">Need Author?</button>
+                                    <p className="text-gray-600 mb-8">{item.description}<br/>
+                                        <br/> Author: <button className="text-black underline" id="author" onClick={() => window.location.assign(`/architecture/${item.authorId}`)}>{item.authorName}</button>
                                     </p>
                                 </div>
                                 <div className="w-full sm:w-1/2 p-6">

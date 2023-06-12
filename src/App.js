@@ -63,11 +63,10 @@ function App() {
           <div className="mx-3">
             <section className="flex justify-center">
               <div className="container w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 m-4 rounded-lg shadow-xl bg-white">
-                <Carousel>
+                <Carousel showIndicators={false}>
                   {sliderElements ? sliderElements.projects.map((item) => (
                       <div>
                         <img src={item.projectImageUrl} alt="#"/>
-                        <p className="legend">{item.name}</p>
                       </div>
                   )) : ''}
                 </Carousel>
@@ -79,20 +78,20 @@ function App() {
         </div>
         <div className="pt-4 pb-4 mt-16 bg-white mx-4 md:mx-20">
           <h1 className="font-monospace float-right text-right md:text-[100px] text-[#fca311] m-0 h-auto">OUR <br /> WORKS</h1>
-          <section className="mt-16 md:mt-60 text-right grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 z-10">
-            <div className="mt-8 md:mt-24">
-              <img className="h-auto w-auto" src={require('./assets/img/house-drafts.png')} alt="" onClick={() => window.location.assign('/house-drafts')}/>
+          <div className="mt-16 ml-8 md:mt-60 text-right grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 z-10">
+            <div className="mt-8 md:mt-24 lg:-ml-20">
+              <img className="h-auto sm:w-auto lg:w-3/4" src={require('./assets/img/house-drafts.png')} alt="" onClick={() => window.location.assign('/house-drafts')}/>
             </div>
-            <div className="mt-16 md:mt-60">
-              <img className="h-auto w-auto" src={require('./assets/img/interior-design.png')} alt="" onClick={() => window.location.assign('/interior')}/>
+            <div className="mt-16 md:mt-60 lg:-mr-96">
+              <img className="h-auto sm:w-auto lg:w-3/4" src={require('./assets/img/interior-design.png')} alt="" onClick={() => window.location.assign('/interior')}/>
             </div>
-            <div className="mt-8">
-              <img className="h-auto w-auto" src={require('./assets/img/urban-projects.png')} alt="" onClick={() => window.location.assign('/urban')}/>
+            <div className="mt-8 lg:-mr-80">
+              <img className="h-auto sm:w-auto lg:w-3/4" src={require('./assets/img/urban-projects.png')} alt="" onClick={() => window.location.assign('/urban')}/>
             </div>
-            <div className="mt-16 md:mt-80">
-              <img className="h-auto w-auto" src={require('./assets/img/reconstructions.png')} alt="" onClick={() => window.location.assign('/reconstructions')}/>
+            <div className="mt-16 md:mt-80 lg:-mr-96">
+              <img className="h-auto sm:w-auto lg:w-3/4" src={require('./assets/img/reconstructions.png')} alt="" onClick={() => window.location.assign('/reconstructions')}/>
             </div>
-          </section>
+          </div>
         </div>
         <div className="w-100 flex flex-col grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-6 bg-[#fca311]">
           <div>
