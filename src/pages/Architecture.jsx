@@ -8,7 +8,9 @@ export const Architecture = () => {
     const [isModal, setIsModal] = useState(false)
     const [author, setAuthor] = useState()
 
-    const id = window.location.href.slice(35, window.location.href.length)
+    //https://archneoweb.herokuapp.com/architecture/4x77uU3ajUDwXZyjsU8c
+    //http://localhost:3000/architecture/4x77uU3ajUDwXZyjsU8c
+    const id = window.location.href.slice(46, window.location.href.length)
     console.log(id)
 
     useEffect(() => {
@@ -18,7 +20,7 @@ export const Architecture = () => {
                 setAuthor(res.data)
             })
         } catch (e) {
-            console.log(e)
+            console.log(e.response.data)
         }
     }, [])
     return (
