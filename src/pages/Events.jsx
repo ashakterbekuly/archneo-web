@@ -50,7 +50,7 @@ export const Events = () => {
                                                 toggleModal(index);
                                             }}
                                         >
-                                            REGISTER
+                                            MORE INFO
                                         </button>
                                     </div>
                                 </div>
@@ -73,11 +73,11 @@ export const Events = () => {
                                         >
                                             Cancel
                                         </button>
-                                        <a href="/register-arch">
+                                        {/* <a href="/register-arch">
                                             <button className="bg-blue-500 hover:bg-blue-600 px-6 py-2 py-1 rounded-full text-white register">
                                                 Register
                                             </button>
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </div>
