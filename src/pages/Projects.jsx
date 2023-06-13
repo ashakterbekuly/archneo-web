@@ -66,7 +66,7 @@ export const Projects = () => {
                                         <p className="text-gray-600 mb-8 text-left">
                                             {item.description}
                                             <br /><br />
-                                            Author: <button className="text-black underline" id={item.author}>{item.author}</button>
+                                            Author: <span className="text-black underline" id={item.author}>{item.author}</span>
                                         </p>
                                     </div>
                                     <div className="w-full sm:w-1/2 p-6">
