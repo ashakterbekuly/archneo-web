@@ -222,11 +222,11 @@ export const Architecture = () => {
                                     <p className="text-gray-600">{item.description}<br/>
                                     </p>
                                 </div>
-                                <div className="py-4 w-3/4 max-w-sm rounded overflow-hidden">
+                                {/* <div className="py-4 w-3/4 max-w-sm rounded overflow-hidden">
                                     <button className="bg-[#fca311] hover:bg-black text-white font-bold py-2 px-8 more-info"
                                             onClick="openModal()"> Edit
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="w-full sm:w-1/2 p-6 mx-auto">
