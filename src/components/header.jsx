@@ -34,7 +34,43 @@ export const Header = () => {
 
     useEffect(() => {
         me()
+        document.onclick = check;
+
+        function check(e) {
+
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
+
+
+            var target = (e && e.target);
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+            // click NOT on the menu
+            if (checkParent(target, navMenu)) {
+                // click on the link
+                if (navMenuDiv.classList.contains("hidden")) {
+                navMenuDiv.classList.remove("hidden");
+                } else {
+                navMenuDiv.classList.add("hidden");
+                }
+            } else {
+                // click both outside link and outside menu, hide menu
+                navMenuDiv.classList.add("hidden");
+            }
+            }
+        }
+
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+            if (t == elm) {
+                return true;
+            }
+            t = t.parentNode;
+            }
+            return false;
+        }
     }, [])
+
 
     const logout = () => {
         sessionStorage.removeItem('token')
@@ -56,7 +92,7 @@ export const Header = () => {
                 <div className="block lg:hidden pr-4">
                     <button id="nav-toggle"
                             className="flex items-center p-1 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                        <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="fill-current h-6 w-6" color="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                         </svg>
